@@ -27,6 +27,8 @@ public class Main {
             System.out.println("( 2 )  Crea un vector de strings");
             System.out.println("( 3 )  Vector +1");
             System.out.println("( 5 )  Sumar elementos vector");
+            System.out.println("( 6 )  Pares e impares vector");
+
             n = sc.nextInt();
 
             switch (n) {
@@ -51,10 +53,40 @@ public class Main {
                     int size = sc.nextInt();
                     sumaElementosVector(size);
                     break;
+                case 6:
+                    System.out.println("==== PARES E IMPARES ====");
+                    System.out.println("¿Cuántos números quieres sumar?");
+                    int numeros = sc.nextInt();
+                    paresImpares(numeros);
+                    break;
             }
 
         } while (n != 4);
     }
+
+    public static void paresImpares(int numeros){
+        int[] vector = new int[numeros];
+        int pares = 0;
+        int impares = 0;
+
+        for(int i=0; i<=vector.length-1;i++){
+            System.out.println("Ingresa el no. "+(i+1));
+            vector[i] = sc.nextInt();
+
+            if(vector[i] % 2 == 0){
+                pares++;
+            }else{
+                impares++;
+            }
+
+        }
+
+        System.out.println("Pares : "+pares);
+        System.out.println("Impares : "+impares);
+
+
+    }
+
 
     public static void sumaElementosVector(int size) {
         int[] vector = new int[size];
