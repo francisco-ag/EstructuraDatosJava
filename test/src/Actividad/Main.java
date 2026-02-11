@@ -2,6 +2,7 @@ package Actividad;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import javax.swing.*;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
@@ -28,6 +29,7 @@ public class Main {
             System.out.println("( 3 )  Vector +1");
             System.out.println("( 5 )  Sumar elementos vector");
             System.out.println("( 6 )  Pares e impares vector");
+            System.out.println("( 7 )  Vector de Alumnos");
 
             n = sc.nextInt();
 
@@ -58,6 +60,14 @@ public class Main {
                     System.out.println("¿Cuántos números quieres sumar?");
                     int numeros = sc.nextInt();
                     paresImpares(numeros);
+                    break;
+                case 7:
+                    int nAlumnos = Integer.parseInt(
+                            JOptionPane.showInputDialog(
+                                    "¿Cuantos alumnos quieres ingresar?"
+                            ));
+                    Alumnno[] vectorAlumnos = new Alumnno[nAlumnos];
+                    
                     break;
             }
 
