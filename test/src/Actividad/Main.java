@@ -67,7 +67,37 @@ public class Main {
                                     "¿Cuantos alumnos quieres ingresar?"
                             ));
                     Alumnno[] vectorAlumnos = new Alumnno[nAlumnos];
-                    
+
+                    for(int i = 0; i<nAlumnos; i++){
+                        String nombre     = JOptionPane.showInputDialog("Ingresa nombre Alumno");
+                        int edad          = Integer.parseInt(JOptionPane.showInputDialog("Ingresa edad Alumno"));
+                        String carrera    = JOptionPane.showInputDialog("Ingresa carrera Alumno");
+                        int cuatrimestre  = Integer.parseInt(JOptionPane.showInputDialog("Ingresa cuatrimestre Alumno"));
+                        String esInscrito = JOptionPane.showInputDialog("¿el alumno está inscrito?");
+                        boolean inscrito ;
+                       if ( esInscrito.equalsIgnoreCase("si")){
+                           inscrito  = true;
+                       }else{
+                           inscrito = false;
+                       }
+
+                       vectorAlumnos[i] = new Alumnno(
+                               nombre,
+                               edad,
+                               carrera,
+                               cuatrimestre,
+                               inscrito
+                       );
+
+                       StringBuilder sb = new StringBuilder("=== Lista de Alumnos ===\n");
+                       for(int j= 0; j<vectorAlumnos.length; j++){
+                           sb.append("Alumno "+(j+1)).append(vectorAlumnos[i].mostrar());
+                       }
+
+                       JOptionPane.showMessageDialog(null,sb.toString());
+
+                    }
+
                     break;
             }
 
