@@ -89,15 +89,16 @@ public class Main {
                                inscrito
                        );
 
-                       StringBuilder sb = new StringBuilder("=== Lista de Alumnos ===\n");
-                       for(int j= 0; j<vectorAlumnos.length; j++){
-                           sb.append("Alumno "+(j+1)).append(vectorAlumnos[i].mostrar());
-                       }
-
-                       JOptionPane.showMessageDialog(null,sb.toString());
 
                     }
+                    System.out.println(Arrays.toString(vectorAlumnos));
 
+                    StringBuilder sb = new StringBuilder("=== Lista de Alumnos ===\n");
+                    for(int j= 0; j<vectorAlumnos.length; j++){
+                        sb.append("Alumno "+(j+1)+"\n").append(vectorAlumnos[j].mostrar());
+                    }
+
+                    JOptionPane.showMessageDialog(null,sb.toString());
                     break;
             }
 
