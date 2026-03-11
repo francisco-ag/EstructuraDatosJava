@@ -45,8 +45,24 @@ public class Main {
                     }
                     break;
                 case 3:
+                    if(!cola.isEmpty()){
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "La cola tiene en la cima : "
+                                        +cola.peek()
+                        );
+                    }else{
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "La cola esta vacía"
+                        );
+                    }
                     break;
                 case 4:
+                    JOptionPane.showMessageDialog(
+                            null,
+                            cola
+                    );
                     break;
                 case 5:
                     JOptionPane.showMessageDialog(
