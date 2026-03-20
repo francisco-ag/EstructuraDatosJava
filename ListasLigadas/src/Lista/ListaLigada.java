@@ -37,13 +37,23 @@ public class ListaLigada {
                 aux.siguiente != null &&
                 !cabeza.dato.equalsIgnoreCase(dato)
         ){
-            aux.siguiente = aux.siguiente.siguiente;
+            aux = aux.siguiente;
         }
-
         if(aux.siguiente != null){
             aux.siguiente = aux.siguiente.siguiente;
         }
+    }
 
+    public String mostrar(){
+        StringBuilder sb = new StringBuilder("Lista Ligada \n");
 
+        Nodo aux = cabeza;
+        while(aux != null){
+            sb.append(aux.dato).append("->");
+            aux = aux.siguiente;
+        }
+
+        sb.append("null");
+        return sb.toString();
     }
 }
